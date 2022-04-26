@@ -15,11 +15,13 @@
 				</li>
 
 				<li class="menu-title">Foto Barang</li><!-- /.menu-title -->
-				<li class="">
-					<a href="#"> <i class="menu-icon fa fa-list"></i>Lihat Foto Barang</a>
+				<li class="{{ request()->is('product-galleries') ? 'active' : '' }}">
+					<a href="{{ route('product-galleries.index') }}"> <i class="menu-icon fa fa-list"></i>Lihat Foto
+						Barang</a>
 				</li>
-				<li class="">
-					<a href="#"> <i class="menu-icon fa fa-plus"></i>Tambah Foto Barang</a>
+				<li class="{{ request()->is('product-galleries/create') ? 'active' : '' }}">
+					<a href="{{ route('product-galleries.create') }}"> <i class="menu-icon fa fa-plus"></i>Tambah Foto
+						Barang</a>
 				</li>
 
 				<li class="menu-title">Transaksi</li><!-- /.menu-title -->
